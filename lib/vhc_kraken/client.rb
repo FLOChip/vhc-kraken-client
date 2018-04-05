@@ -25,6 +25,11 @@ module VhcKraken
       parse_response response
     end
 
+    def self.get_trades_for_XBTUSD
+      response = connection.get "Trades?pair=XBTUSD"
+      parse_response response
+    end
+
     #for ETHUSD
     def self.get_OHLC_for_ETHUSD
       response = connection.get "OHLC?pair=ETHUSD"
@@ -41,6 +46,11 @@ module VhcKraken
       parse_response response
     end
 
+    def self.get_trades_for_ETHUSD
+      response = connection.get "Trades?pair=ETHUSD"
+      parse_response response
+    end
+
     #for ETHXBT
     def self.get_OHLC_for_ETHXBT
       response = connection.get "OHLC?pair=ETHXBT"
@@ -54,6 +64,11 @@ module VhcKraken
 
     def self.get_orderbook_for_ETHXBT
       response = connection.get "Depth?pair=ETHXBT"
+      parse_response response
+    end
+
+    def self.get_trades_for_ETHXBT
+      response = connection.get "Trades?pair=ETHXBT"
       parse_response response
     end
 
