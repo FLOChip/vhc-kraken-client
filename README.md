@@ -6,23 +6,37 @@ TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
+Clone this repo
+    
+    $ git clone https://github.com/friendlysystementerprise/vhc-kraken-client.git
+
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'vhc_kraken'
+gem 'vhc_kraken', path: "~/projects/vhc-kraken-client" #insert your gem path
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install vhc_kraken
 
 ## Usage
 
-TODO: Write usage instructions here
+Retrieve data from Kraken API
+
+```ruby
+VhcKraken::Client.get_public_time
+VhcKraken::Client.get_OHLC_for_XBTUSD #get OHLC data for BTC/USD
+VhcKraken::Client.get_ticker_for_XBTUSD #get Ticker data for BTC/USD
+VhcKraken::Client.get_orderbook_for_XBTUSD #get Orderbook data for BTC/USD
+VhcKraken::Client.get_OHLC_for_ETHUSD #get OHLC data for ETH/USD
+VhcKraken::Client.get_ticker_for_ETHUSD #get Ticker data for ETH/USD
+VhcKraken::Client.get_orderbook_for_ETHUSD #get Orderbook data for ETH/USD
+VhcKraken::Client.get_OHLC_for_ETHXBT #get OHLC data for ETH/BTC
+VhcKraken::Client.get_ticker_for_ETHXBT #get Ticker data for ETH/BTC
+VhcKraken::Client.get_orderbook_for_ETHXBT #get Orderbook data for ETH/BTC
+```
 
 ## Development
 
